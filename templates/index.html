@@ -1,0 +1,122 @@
+<html>
+<head>
+  <style>
+    h1{
+       text-align: center;
+       color: green;
+       }
+
+    label {
+      padding: 12px 35px 15px 0;
+      display: inline-block;
+      font-size: 18px;
+      width: 250px;
+      text-align: right;
+
+    }
+
+    input{
+       width: 300px;
+       text-align: right;
+    }
+
+    select {
+        width: 150px;
+        margin: 10px;
+    }
+    select:focus {
+        min-width: 150px;
+        width: auto;
+        text-align: right;
+    }
+
+
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 10px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.bg-nav{
+   background-color: orange;
+
+}
+
+  </style>
+</head>
+
+<body class="bg-nav">
+<br><br><br>
+    <h1>IRIS CLASSIFICATION</h1>
+    <div>
+      <br><br>
+
+  <form action="/result" method="POST">
+    <label for="sepal_length" >sepla_length</label>
+    <input type="text" id="sepal_length" name="sepal_length">btw[4.00-8.00]in cm
+
+    <br>
+    <label for="sepal_width" >sepal_width</label>
+    <input type="text" id="sepal_width" name="sepal_width">btw[2.00-4.50]in cm
+
+    <br>
+    <label for="petal_length" >petal_length</label>
+    <input type="text" id="petal_length" name="petal_length">btw[1.00-7.00]in cm
+
+    <br>
+    <label for="petal_width" >petal_width</label>
+    <input type="text" id="petal_width" name="petal_width">btw[0.00-2.50]in cm
+
+
+    <br>
+      <br><br><br><br>
+
+      <div class="buttons">
+    <button class="btn-hover color-1">SUBMIT</button>
+
+      </div>
+  </form>
+        <h1> {{ prediction }}</h1>
+    </div>
+</body>
+</html>
